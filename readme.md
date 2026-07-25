@@ -11,3 +11,7 @@ View the exercises in the [GitHub Pages site for this repo](https://go.microsoft
 ## Reporting issues
 
 If you encounter any problems in the exercises, please report them as **issues** in this repo.
+
+## Personal Noyes
+
+This is Lab 3 from the SKillable Lab series for AI-103 certification. 
