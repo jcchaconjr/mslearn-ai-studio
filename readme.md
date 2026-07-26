@@ -14,10 +14,26 @@ If you encounter any problems in the exercises, please report them as **issues**
 
 ## Personal Notes
 
-This is **Lab 3** from the **Skillable Lab series** for **AI-103 certification**. The instructions for building the chat agent in Microsoft Foundry, along with the code details that were added to teh generic code sample, can be found in:
+## VS Code Environment Requirements
+
+ To properly set up the VS Code development environment in Windows 11, I set up the following:
+
+ - Python 3.13 (Download from the Microsoft Store app in Windows)
+ - The Python Language Support extension from Micrsoft
+ - Ensure that Python is set up to use env files (hit CTRL+, to open Settings, then enter python.envfile.useenvfile in the search bar to see the property - make sure it is checked)
+ - Use the Windows Package Manager to load the Azure CLI (PowerShell command: *winget install -e --id Microsoft.AzureCLI*)
+ - To ensure that Azure login authenticates via web browser, enter the following PowerShell command: *az config set core.allow_broker=false*
+ - The OpenAI endpoint in the project .env file **MUST** be updated with the OpenAI endpoint generated after creating a project resource as indicated in the Lab 3 instructions. 
+
+ In this case, I used the lab credentials locally after setting up the code and environment on my local machine. With the models deployed via the Skillable session, the model resource is accessible externally, as long as you have the model requirements (OpenAI endpoint, Model Deployment name) set up locally.
+
+ ## Lab 3 Notes
+
+**Lab 3** from the **Skillable Lab series** for **AI-103 certification**, uses the code at the following github: **https://github.com/MicrosoftLearning/mslearn-ai-studio**. The instructions for building the chat agent in Microsoft Foundry, along with the code details that were added to the generic code sample, can be found in:
 .\Instructions\Exercises\03-foundry-sdk.md
 
-The code for this specific exercises creates both a synchronous Chat app and an asynchronous chat app via the two Python scripts provided.
+The code for this specific exercises creates both a synchronous Chat app and an asynchronous chat app via the two Python scripts provided. The following app files for this lab are in:
+.\labfiles/foundry-chat/python/chat-app. 
 
 **Synchronous app (chat-app.py)** -  the Lab guides you through 4 different ways that you can use the deployed model:
 
@@ -31,17 +47,10 @@ I have added the code for all 4 scenarios used in this lab. One AND ONLY ONE blo
 
  **Asynchronous App (chat-async.py)** - This app is straghtforward enough. It replicates the objective simply enough, butr calls the response object using await for asynchronous responses.
 
- ## VS Code Environment Requirements
+## Lab 4 Notes
 
- To properly set up the VS Code development environment in Windows 11, I set up the following:
+**Lab 4** from the **Skillable Lab series** for **AI-103 certification**, uses the code at the following github: **https://github.com/MicrosoftLearning/mslearn-ai-studio**. The instructions for building the chat agent in Microsoft Foundry, along with the code details that were added to the generic code sample, can be found in:
+.\Instructions\Exercises\04a-use-own-data.md
 
- - Python 3.13 (Download from the Microsoft Store app in Windows)
- - The Python Language Support extension from Micrsoft
- - Ensure that Python is set up to use env files (hit CTRL+, to open Settings, then enter python.envfile.useenvfile in the search bar to see the property - make sure it is checked)
- - Use the Windows Package Manager to load the Azure CLI (PowerShell command: *winget install -e --id Microsoft.AzureCLI*)
- - To ensure that Azure login authenticates via web browser, enter the following PowerShell command: *az config set core.allow_broker=false*
- - The OpenAI endpoint in the project .env file **MUST** be updated with the OpenAI endpoint generated after creating a project resource as indicated in the Lab 3 instructions. 
-
- In this case, I used the lab credentials locally after setting up the code and environment on my local machine. With the models deployed via the Skillable session, the model resource is accessible externally, as long as you have the model requirements (OpenAI endpoint, Model Deployment name) set up locally.
-
+The application will load, vectorize, and upload the vectorized PDF files in the "brochures" subfolder to teh Model. Once loaded, The objective is to query the model for data based in the documents, from which the Model will provide answers. The code base is simple enough, as it is not modified several times like Lab 3 was. Just prmompt the model the questions as suggested in the instrcutions to complete the exercise.
 
