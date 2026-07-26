@@ -19,7 +19,7 @@ This is **Lab 3** from the **Skillable Lab series** for **AI-103 certification**
 
 The code for this specific exercises creates both a synchronous Chat app and an asynchronous chat app via the two Python scripts provided.
 
-Synchronous app (chat-app.py) -  the Lab guides you through 4 different ways that you can use the deployed model:
+**Synchronous app (chat-app.py)** -  the Lab guides you through 4 different ways that you can use the deployed model:
 
 - Connecting via the ChjatCompletions API.
 - Connecting via the Responses API.
@@ -28,6 +28,8 @@ Synchronous app (chat-app.py) -  the Lab guides you through 4 different ways tha
 
 I have added the code for all 4 scenarios used in this lab. One AND ONLY ONE block should be uncommented when running the script.
  **NOTE:** The declaration of the variable last_response_id can be commented out when using the code block for SECTION 1 or 2. It is required if usiong the socde in sections 3 or 4.
+
+ **Asynchronous App (chat-async.py)** - This app is straghtforward enough. It replicates the objective simply enough, butr calls the response object using await for asynchronous responses.
 
  ## VS Code Environment Requirements
 
