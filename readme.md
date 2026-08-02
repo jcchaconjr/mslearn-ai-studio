@@ -16,7 +16,7 @@ If you encounter any problems in the exercises, please report them as **issues**
 
 ## Personal Notes
 
-**DISCLAIMER:** This is a personal fork of the Microsoft provided lab resources indicated above, with my personal notes indicating what I have updated in the project. If you'd like to work with the original Repo as provided by MSLearn, you can clone it yourself from the link provided above.
+**DISCLAIMER:** This is a personal fork of the Microsoft provided lab resources indicated above, with my personal notes indicating what I have updated in the project. If you'd like to work with the original Repo as provided by MSLearn, you can clone it yourself from the link provided above, or below in the Lab Notes.
 
 ## VS Code Environment Requirements
 
