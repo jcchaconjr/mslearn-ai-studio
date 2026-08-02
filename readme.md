@@ -14,6 +14,8 @@ If you encounter any problems in the exercises, please report them as **issues**
 
 ## Personal Notes
 
+**DISCLAIMER:** This is a personal fork of the Microsoft provided resources below, with my personal notes indicating what I have updated in the project. If you'd like to work with the original Repo as provided by MSLearn, you can clone it yourself from the link provided above.
+
 ## VS Code Environment Requirements
 
  To properly set up the VS Code development environment in Windows 11, I set up the following:
