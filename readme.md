@@ -19,17 +19,17 @@ If you encounter any problems in the exercises, please report them as **issues**
  To properly set up the VS Code development environment in Windows 11, I set up the following:
 
  - Python 3.13 (Download from the Microsoft Store app in Windows)
- - The Python Language Support extension from Micrsoft
- - Ensure that Python is set up to use env files (hit CTRL+, to open Settings, then enter python.envfile.useenvfile in the search bar to see the property - make sure it is checked)
+ - The Python Language Support extension from Microsoft
+ - Ensure that Python is set up to use env files (hit CTRL + the comma key to open Settings) - enter python.envfile.useenvfile in the Settings search bar to see the property - make sure it is checked.
  - Use the Windows Package Manager to load the Azure CLI (PowerShell command: *winget install -e --id Microsoft.AzureCLI*)
- - To ensure that Azure login authenticates via web browser, enter the following PowerShell command: *az config set core.allow_broker=false*
- - The OpenAI endpoint in the project .env file **MUST** be updated with the OpenAI endpoint generated after creating a project resource as indicated in the Lab 3 instructions. 
+ - After the CLI is installed, to ensure that Azure login authenticates via web browser, enter the following PowerShell command: *az config set core.allow_broker=false*
+ - The OpenAI endpoint in the project's .env file **MUST** be updated with the OpenAI endpoint generated after creating a project resource as indicated in the Lab 3 instructions. 
 
  In this case, I used the lab credentials locally after setting up the code and environment on my local machine. With the models deployed via the Skillable session, the model resource is accessible externally, as long as you have the model requirements (OpenAI endpoint, Model Deployment name) set up locally.
 
  ## Lab 3 Notes
 
-**Lab 3** from the **Skillable Lab series** for **AI-103 certification**, uses the code at the following github: **https://github.com/MicrosoftLearning/mslearn-ai-studio**. The instructions for building the chat agent in Microsoft Foundry, along with the code details that were added to the generic code sample, can be found in:
+**Lab 3** from the **Skillable Lab series** for **AI-103 certification**, uses the code in this github: **https://github.com/MicrosoftLearning/mslearn-ai-studio**. The instructions for building the chat agent in Microsoft Foundry, along with the code details that were added to the generic code sample, can be found in:
 .\Instructions\Exercises\03-foundry-sdk.md
 
 The code for this specific exercises creates both a synchronous Chat app and an asynchronous chat app via the two Python scripts provided. The following app files for this lab are in:
@@ -37,15 +37,17 @@ The code for this specific exercises creates both a synchronous Chat app and an 
 
 **Synchronous app (chat-app.py)** -  the Lab guides you through 4 different ways that you can use the deployed model:
 
-- Connecting via the ChjatCompletions API.
+- Connecting via the ChatCompletions API.
 - Connecting via the Responses API.
 - Using the Repsonses API with conversation tracking.
 - Adding streaming responses to the conversation tracking example.
 
 I have added the code for all 4 scenarios used in this lab. One AND ONLY ONE block should be uncommented when running the script.
- **NOTE:** The declaration of the variable last_response_id can be commented out when using the code block for SECTION 1 or 2. It is required if usiong the socde in sections 3 or 4.
+ **NOTE:** The declaration of the variable last_response_id can be commented out when using the code block for SECTION 1 or 2. It is required if using the code in sections 3 or 4.
 
- **Asynchronous App (chat-async.py)** - This app is straghtforward enough. It replicates the objective simply enough, butr calls the response object using await for asynchronous responses.
+ **Asynchronous App (chat-async.py)** - This app is straghtforward enough. It replicates the objective, but calls the response object using await for asynchronous responses.
+
+ In all cases, the instructions for using the chatbot provided above will include prompts that you can use to try the chatbot and validate its appropriate responses.
 
 ## Lab 4 Notes
 
@@ -54,3 +56,10 @@ I have added the code for all 4 scenarios used in this lab. One AND ONLY ONE blo
 
 The application will load, vectorize, and upload the vectorized PDF files in the "brochures" subfolder to teh Model. Once loaded, The objective is to query the model for data based in the documents, from which the Model will provide answers. The code base is simple enough, as it is not modified several times like Lab 3 was. Just prmompt the model the questions as suggested in the instrcutions to complete the exercise.
 
+## The Other Lab Exercises
+
+There are a total of 6 Lab Exercises in this repository, but only Labs 3 and 4 make use of code projects. The Exercises for the other labs can all be done inside of the Azure portal (**ai.azure.com**), as you are pretty much working in the portal's provided sandboxes with the resources created.
+
+## Cleanup
+
+Also as noted, DON"T FORGET to clean up any and all Azure resources after you complete a lab! As the labs typically As you to Create the lab projects inside of a Resource Group named "ResourceGroup1", the fastest way to clean up is by going into the Azure portal site (portal.azure.com) then deleting that resource group after bringing up the Resource Groups list. Just select the Resource Group, then from teh detail view for the Group, select "Delete Resource group" from the top, and follow the instructions. It should take about a minute to clean them up.
